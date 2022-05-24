@@ -1,0 +1,76 @@
+# -Not-enough-allocatable-device-memory-for-this-attack.
+
+I'm getting this error when trying to load an MD5 hash into memory and around 10k words from my library
+My OCL device is a 750Ti with 2G VRAM.
+
+As it works with smaller files, I can, of course, split the file and script hashcat to iterate through them, but would't be better if HC could handle this scenarios by itself? I don't thinl it's that uncommon.
+
+Here's the complete output and version:
+
+
+OUTPUT_1
+C:\Users\USER\Downloads\hashcat-6.2.5\hashcat-6.2.5>hashcat.exe -a 0 -m 0 hashes.txt C:\Users\USER\Downloads\hashcat-6.2.5\hashcat-6.2.5\10k-most-common.txt
+hashcat (v6.2.5) starting
+
+OpenCL API (OpenCL 1.2 ) - Platform #1 [Intel(R) Corporation]
+=============================================================
+* Device #1: Intel(R) HD Graphics 4400, 768/1629 MB (203 MB allocatable), 20MCU
+* Device #2: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, skipped
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+Hashes: 1 digests; 1 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Optimizers applied:
+* Zero-Byte
+* Early-Skip
+* Not-Salted
+* Not-Iterated
+* Single-Hash
+* Single-Salt
+* Raw-Hash
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Pure kernels can crack longer passwords, but drastically reduce performance.
+If you want to switch to optimized kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Hardware monitoring interface not found on your system.
+Watchdog: Temperature abort trigger disabled.
+
+* Device #1: Not enough allocatable device memory for this attack.
+
+Started: Tue May 24 09:27:27 2022
+Stopped: Tue May 24 09:27:50 2022
+
+
+
+
+
+						OUTPUT_2
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Device name	DESKTOP-VV9ELLL
+Processor	Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz   2.50 GHz
+Installed RAM	8.00 GB (7.90 GB usable)
+Device ID	8EF9F489-E642-4FAE-9F1D-6865936F78D7
+Product ID	00330-80214-20243-AA229
+System type	64-bit operating system, x64-based processor
+Pen and touch	Pen and touch support with 10 touch points

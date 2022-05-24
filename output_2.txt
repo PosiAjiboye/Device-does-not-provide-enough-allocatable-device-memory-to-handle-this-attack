@@ -1,0 +1,61 @@
+┌──(emissary㉿kali)-[~]
+└─$ hashcat -a 0 -m 0 /home/emissary/Downloads/hashes/hashes.txt /home/emissary/Downloads/hashes/10k-most-common.txt
+hashcat (v6.1.1) starting...
+
+OpenCL API (OpenCL 1.2 pocl 1.6, None+Asserts, LLVM 9.0.1, RELOC, SLEEF, DISTRO, POCL_DEBUG) - Platform #1 [The pocl project]
+=============================================================================================================================
+* Device #1: pthread-Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, 1423/1487 MB (512 MB allocatable), 1MCU
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+Hashes: 1 digests; 1 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Applicable optimizers applied:
+* Zero-Byte
+* Early-Skip
+* Not-Salted
+* Not-Iterated
+* Single-Hash
+* Single-Salt
+* Raw-Hash
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Using pure kernels enables cracking longer passwords but for the price of drastically reduced performance.
+If you want to switch to optimized backend kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Hardware monitoring interface not found on your system.
+Watchdog: Temperature abort trigger disabled.
+
+Host memory required for this attack: 64 MB
+
+Dictionary cache built:
+* Filename..: /home/emissary/Downloads/hashes/10k-most-common.txt
+* Passwords.: 10000
+* Bytes.....: 83017
+* Keyspace..: 10000
+* Runtime...: 0 secs
+
+Approaching final keyspace - workload adjusted.  
+
+Session..........: hashcat                       
+Status...........: Exhausted
+Hash.Name........: MD5
+Hash.Target......: 8743b52063cd84097a65d1633f5c74f5
+Time.Started.....: Tue May 24 09:37:18 2022 (0 secs)
+Time.Estimated...: Tue May 24 09:37:18 2022 (0 secs)
+Guess.Base.......: File (/home/emissary/Downloads/hashes/10k-most-common.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:    22616 H/s (0.58ms) @ Accel:1024 Loops:1 Thr:1 Vec:8
+Recovered........: 0/1 (0.00%) Digests
+Progress.........: 10000/10000 (100.00%)
+Rejected.........: 0/10000 (0.00%)
+Restore.Point....: 10000/10000 (100.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#1....: dga9la -> eyphed
+
+Started: Tue May 24 09:33:55 2022
+Stopped: Tue May 24 09:37:20 2022
