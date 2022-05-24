@@ -8,20 +8,10 @@ Question is: Why is it like this
 
 Here's the complete output and version:
 
-                                                   
-                                                   
-                                                   OUTPUT_1
-                                                   
-
-I'm getting this error when trying to load an MD5 hash into memory and around 10k words from my library
-My OCL device is a 750Ti with 2G VRAM.
-
-As it works with smaller files, I can, of course, split the file and script hashcat to iterate through them, but would't be better if HC could handle this scenarios by itself? I don't thinl it's that uncommon.
-
-Here's the complete output and version:
+                   
 
 
-OUTPUT_1
+									OUTPUT_1
 C:\Users\USER\Downloads\hashcat-6.2.5\hashcat-6.2.5>hashcat.exe -a 0 -m 0 hashes.txt C:\Users\USER\Downloads\hashcat-6.2.5\hashcat-6.2.5\10k-most-common.txt
 hashcat (v6.2.5) starting
 
@@ -63,7 +53,7 @@ Stopped: Tue May 24 09:27:50 2022
 
 
 
-					                                                            	OUTPUT_2
+					                         	OUTPUT_2
  ┌──(emissary㉿kali)-[~]
 └─$ hashcat -a 0 -m 0 /home/emissary/Downloads/hashes/hashes.txt /home/emissary/Downloads/hashes/10k-most-common.txt
 hashcat (v6.1.1) starting...
